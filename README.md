@@ -1,7 +1,6 @@
+<img src="./docs/images/gail-transparent.png" alt="Gail, our chaotic goose" align="right" width="200px" height="200px"/>
+
 # gagl
-
-![Gail, our chaotic goose](docs/images/gail-transparent.png)
-
 _gagl_ (like "gaggle") is an in-progress toolkit for people with dissociative identity disorder (DID) or other specified dissociative disorder 1 (OSDD-1a/b).
 
 ### Tools
