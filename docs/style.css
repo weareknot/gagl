@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@800&family=Roboto&display=swap");
+h1, h2, h3 {
+  font-family: 'Barlow', sans-serif; }
+
+h1 {
+  font-size: 4em;
+  text-decoration: underline;
+  margin-top: 10px;
+  text-shadow: 2px 2px 0 #8DDEDB; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.gail-icon {
+  width: 150px;
+  height: auto;
+  border: 3px solid black;
+  border-radius: 100%; }
+
+.body-container {
+  display: flex;
+  flex-direction: column; }
+  .body-container > * {
+    align-self: center; }
+
+a {
+  color: #185452; }
+
+.link {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  background-color: #8DDEDB;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 black; }
+  .link:hover {
+    box-shadow: 2px 2px 0 black;
+    transform: translate(1px, 1px); }
+  .link h2 {
+    margin: 0; }
+
+/*# sourceMappingURL=style.css.map */
