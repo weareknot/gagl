@@ -35,3 +35,6 @@ NEO4J_PASS=yourpassword
 ```
 
 2. Run `docker-compose up -d` in the project root.
+
+### Commits + pull requests
+PRs are welcome! Please follow [Conventional Commits](https://www.conventionalcommits.org) for your commit messages :)
