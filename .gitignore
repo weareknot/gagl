@@ -1,3 +1,6 @@
 .idea/
 db/
 .env
+
+docs/.sass-cache
+docs/style.css.map
