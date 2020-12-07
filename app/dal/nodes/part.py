@@ -50,3 +50,16 @@ class Part(StructuredNode):
 
     def add_partner(self, other, relationship_type='partner', since=None, details=None, reciprocal='partner'):
         self._add_network(other, 'romantic', relationship_type, since, details, reciprocal)
+
+    @property
+    def family(self):
+        q = 'MATCH (p:Part) WHERE id(p)=$self MATCH (p)-[n:NETWORK{basic_type:"familial"}]-(pp:Part) RETURN n, pp'
+        results, columns = self.cypher(q)
+        family = {}
+        for n, pp in results:
+            relationship = NetworkRel.inflate(n)
+            part = Part.inflate(pp)
+            entry = family.get(part.id, {'part': part, 'relationships': []})
+            entry['relationships'] += [relationship]
+            family[part.id] = entry
+        return family
