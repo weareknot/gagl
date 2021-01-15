@@ -1,4 +1,4 @@
-from neomodel import StructuredNode, RelationshipTo, RelationshipFrom, One, StringProperty
+from neomodel import StructuredNode, RelationshipTo, RelationshipFrom, One, StringProperty, BooleanProperty
 
 
 class Settings(StructuredNode):
@@ -19,6 +19,6 @@ class ConfigurableNodeSettings(Settings):
     display_name = StringProperty(required=False)
     avatar = StringProperty(required=False)
     proxy_tag = StringProperty(required=False)
-    autoproxy = StringProperty(required=False)
+    autoproxy = BooleanProperty(default=False)
     entity = RelationshipFrom('app.dal.nodes._base.ConfigurableNode', 'SETTINGS', One)
     scope = RelationshipTo('app.dal.nodes.server.Server', 'SCOPE')
