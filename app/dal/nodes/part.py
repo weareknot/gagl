@@ -1,5 +1,7 @@
 from neomodel import StringProperty, RelationshipTo, StructuredRel, IntegerProperty, ArrayProperty, \
-    DateProperty, JSONProperty, StructuredNode
+    DateProperty, JSONProperty
+
+from ._base import ConfigurableNode
 
 
 class NetworkRel(StructuredRel):
@@ -9,7 +11,7 @@ class NetworkRel(StructuredRel):
     details = StringProperty(required=False)
 
 
-class Part(StructuredNode):
+class Part(ConfigurableNode):
     name = StringProperty(required=True, index=True)
     description = StringProperty(required=False)
     pronouns = StringProperty(required=False)

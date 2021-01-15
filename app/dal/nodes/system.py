@@ -1,7 +1,9 @@
-from neomodel import StructuredNode, StringProperty, RelationshipTo, RelationshipFrom, One
+from neomodel import StringProperty, RelationshipTo, RelationshipFrom, One
+
+from ._base import ConfigurableNode
 
 
-class System(StructuredNode):
+class System(ConfigurableNode):
     name = StringProperty(required=True, index=True)
     description = StringProperty(required=False)
 
